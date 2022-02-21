@@ -1,0 +1,10 @@
+<div class="pet-wraper">
+    <p class=""><b>Pet Name</b>: {{pet.name}} </p>
+    <p>{{pet.desc}}</p>
+    <div class="row">
+        <div class="col"><input type="file" accept="image/*" (change)="upLoadImg($event)" class="form-control"></div>
+        <div class="col"><img *ngIf="pet.img" style="max-width: 300px;" class="w-100" [src]="pet.img" alt="pet_img">
+        </div>
+    </div>
+
+</div>

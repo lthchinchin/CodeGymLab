@@ -1,0 +1,24 @@
+<div class="container">
+    <!-- <button (click)="myFunc($event.target)" class="btn btn-success">
+        click me
+    </button>
+    <ul>
+        <li *ngFor="let user of users">{{user.name}}</li>
+    </ul> -->
+    <h2 [ngStyle]="{'font-size':fs+'px'}">{{inpTitle}}</h2>
+
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <input type="text" [(ngModel)]=inpTitle placeholder="Type something..." class="form-control mb-md-0 mb-3">
+        </div>
+        <div class="col-md-6 col-12">
+            <select (click)="changeSize($event.target.value)" class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="16">16px</option>
+                <option value="24">24px</option>
+                <option value="32">32px</option>
+            </select>
+            <input type="range" [(ngModel)]=fs min="16" max="48" class="form-range" id="customRange" name="points">
+        </div>
+    </div>
+</div>
